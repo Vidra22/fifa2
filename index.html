@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="stye.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>🚎На цьому сайті ви зможете нaписати мені в реаьному часі🚎</h1>
+            <nav>
+                <a class="nav"href="#price">Контакти</a>
+                <a class="nav"href="#delivery">Чат</a>
+            </nav>
+        </header>
+        <main id="delivery">
+                <style id="chat">
+        #chat-output {
+            height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
+    <div id="chat-output"></div>
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("message-input");
+            var messageOutput = document.getElementById("chat-output");
+
+            var message = messageInput.value;
+            messageInput.value = "";
+
+            var timestamp = new Date().toLocaleString();
+
+            var newMessage = document.createElement("p");
+            newMessage.innerHTML = timestamp + " - " + message;
+
+            messageOutput.appendChild(newMessage);
+        }
+    </script>
+        </main>
+        <footer id="price">
+         <p id="contacts"><b><i>Контакти</i></b></p>
+            <p class="kontacts">Адреса: м. Житомир вул.Тр******ка 13 </p>
+            <p class="kontacts">Тел.: 050768051</p>   
+        </footer>
+    </body>
+</html>
